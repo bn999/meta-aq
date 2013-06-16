@@ -1,0 +1,21 @@
+# LAYER_CONF_VERSION is increased each time build/conf/bblayers.conf
+# changes incompatibly
+LCONF_VERSION = "6"
+
+BBPATH = "${TOPDIR}"
+BBFILES ?= ""
+BBLAYERS ?= " \
+  /home/bn/Docs/overo/yocto/poky/meta \
+  /home/bn/Docs/overo/yocto/poky/meta-yocto \
+  /home/bn/Docs/overo/yocto/poky/meta-openembedded/meta-gnome \
+  /home/bn/Docs/overo/yocto/poky/meta-openembedded/meta-oe \
+  /home/bn/Docs/overo/yocto/poky/meta-openembedded/meta-xfce \
+  /home/bn/Docs/overo/yocto/poky/meta-openembedded/meta-systemd \
+  /home/bn/Docs/overo/yocto/poky/meta-openembedded/meta-networking \
+  /home/bn/Docs/overo/yocto/poky/meta-openembedded/meta-efl \
+  /home/bn/Docs/overo/yocto/poky/meta-openembedded/meta-multimedia \
+  /home/bn/Docs/overo/yocto/poky/meta-gumstix-extras \
+  /home/bn/Docs/overo/yocto/poky/meta-ti \
+  /home/bn/Docs/overo/yocto/poky/meta-aq \
+  "
+BBMASK = "meta-ti/recipes-misc|meta-linaro/recipes-lamp|meta-oe/recipes-extended/lighttpd|meta-linaro/recipes-core/netbase"
